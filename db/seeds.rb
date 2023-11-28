@@ -7,3 +7,5 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Monument.create(name: "Eiffel tower", location: "France", description: "A beautiful tower in Paris", price: 1500000000)
+Monument.create(name: "Statue of Liberty", location: "America", description: "An enormous green statue off the coast of New York City", price: 12)
