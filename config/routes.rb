@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get "/monument", to: "monument_controller#index"
 end
