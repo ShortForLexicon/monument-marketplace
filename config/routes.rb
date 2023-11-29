@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   # get "/monument/:id", to: "monuments#show", as: :monuments
   # post "/monuments", to: "monuments#create"
 
-  get "/offers", to: "offers#index"
 end
