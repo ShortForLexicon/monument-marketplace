@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "/monuments/new", to: "monuments#new"
   get "/monument/:id", to: "monuments#show"
   post "/monuments", to: "monuments#create"
+  get "/test", to: "pages#test"
 end
