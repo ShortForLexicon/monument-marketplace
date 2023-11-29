@@ -1,1 +1,38 @@
+<%= render 'header' %>
+
 <h1>show page</h1>
+
+<!-- div class container -->
+<div class = "container">
+  <div class = "monuments-content">
+    <div class = "row">
+      <div class = "col-md-6">
+        <img src = "<%= @monument.image %>" alt = "">
+      </div>
+      <div class = "col-md-6">
+        <h2><%= @monuments.name%> Monuments</h2>
+      <div class = "btn-style" role = "group" aria-label = "...">
+        <h1><%= @monument.name %></h1>
+        <p><%= @monument.location %></p>
+        <p><%= @monument.description %></p>
+        <p><%= @monument.price %></p>
+        <%= link_to "New Monument", monuments_new_path %>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+
+    <div class = "monuments-grid">
+      <% @list.monuments.each do monument %>
+      <div class= "box-poster">
+        <img class = "img-responsive" src = "<%= monument.image %>" alt = "">
+        <p class = "movie-path"><%= link_to monument.name, monument_path(monument) %></p>
+      </div>
+    <% end %>
+  </div>
+
+<!-- I will use the link_to helper method to create a link to the home page -->
+  <%= link_to "Home", root_path %>
+</div>
