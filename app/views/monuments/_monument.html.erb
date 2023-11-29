@@ -5,13 +5,21 @@
   two arguments: the text that will be displayed on the page and the path that the link
   will take the user to. I will use the monument_path for the show page for each monument.
   I will also add a link to the new monument page. -->
-  <div class="container" id="<%= dom_id monument %>">
 
+  <div class="container" id="<%= dom_id monument %>">
+  <div class = "anouncecard">
+    <div class= "name">
     <p>
     <strong>Name:</strong>
     <%= monument.name %>
+    </div>
   </p>
 
+  <div class = "monument">
+    <%= image_tag "tajpicture.jpg", class:"imagemonument" %>
+  </div>
+
+<div class = "description">
   <p>
     <strong>Location:</strong>
     <%= monument.location  %>
@@ -29,3 +37,6 @@
     <%= link_to "Find out more", monument %>
     <%= link_to "New Monument", new_monument_path %>
   </p>
+  </div>
+  </div>
+  </div>
