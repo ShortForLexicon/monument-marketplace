@@ -1,4 +1,3 @@
-
   <!-- I want to list all the monuments on my homepage -->
   <!-- I will use the each method to iterate over the array of monuments and display each
   monument's name, location, description, and price. I will use the link_to helper method
@@ -7,13 +6,23 @@
   will take the user to. I will use the monument_path for the show page for each monument.
   I will also add a link to the new monument page. -->
   <div class="container">
-    <ul>
-      <% @monuments.each do |monument| %>
-        <li>
-          <%= link_to monument.name, monuments_path(monument) %>
-          <%= monument.location %>
-          <%= monument.description %>
-          <%= monument.price %>
-        </li>
-      <% end %>
-  </div>
+
+    <p>
+    <strong>Name:</strong>
+    <%= monument.name %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= monument.location  %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= monument.description %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%= monument.price %>
+  </p>
+    <%= link_to "New Monument", new_monument_path %>

@@ -7,16 +7,17 @@
   <div class = "monuments-content">
     <div class = "row">
       <div class = "col-md-6">
-        <img src = "<%= @monument.image %>" alt = "">
+      <!-- commented out the following line because we have not added images to the database-->
+        <%# <img src = "<%= @monument.image " alt = ""> %>
       </div>
       <div class = "col-md-6">
-        <h2><%= @monuments.name%> Monuments</h2>
+        <h2><%= @monument.name%> Monuments</h2>
       <div class = "btn-style" role = "group" aria-label = "...">
         <h1><%= @monument.name %></h1>
         <p><%= @monument.location %></p>
         <p><%= @monument.description %></p>
         <p><%= @monument.price %></p>
-        <%= link_to "New Monument", monuments_new_path %>
+        <%= link_to "New Monument", new_monument_path %>
       </div>
     </div>
   </div>
@@ -24,14 +25,16 @@
 
   <hr>
 
-    <div class = "monuments-grid">
-      <% @list.monuments.each do monument %>
-      <div class= "box-poster">
-        <img class = "img-responsive" src = "<%= monument.image %>" alt = "">
-        <p class = "movie-path"><%= link_to monument.name, monument_path(monument) %></p>
-      </div>
-    <% end %>
-  </div>
+<!-- the following is commented out because we have not added images to the database-->
+
+   <!--  <div class = "monuments-grid">
+      <%# <% @list.monuments.each do monument %> %>
+      <%# <div class= "box-poster"> %>
+        <%# <img class = "img-responsive" src = "<%= monument.image %>" alt = ""> %>
+        <%# <p class = "movie-path"><%= link_to monument.name, monument_path(monument) %></p> %>
+      <%# </div> %>
+    <%# <% end %> %>
+  </div> -->
 
 <!-- I will use the link_to helper method to create a link to the home page -->
   <%= link_to "Home", root_path %>

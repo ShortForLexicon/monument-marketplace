@@ -17,4 +17,10 @@ class MonumentsController < ApplicationController
     @monument = Monument.new
     flash[:notice] = "Monument created successfully"
   end
+
+  private
+
+  def monument_params
+    params.require(:monument).permit(:name,:location,:description,:price)
+  end
 end
