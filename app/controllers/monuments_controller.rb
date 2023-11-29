@@ -9,9 +9,18 @@ class MonumentsController < ApplicationController
 
   def create
     @monument = Monument.new(monument_params)
+    @monument.save
+    redirect_to @monument
   end
 
   def new
     @monument = Monument.new
+    flash[:notice] = "Monument created successfully"
+  end
+
+  private
+
+  def monument_params
+    params.require(:monument).permit(:name,:location,:description,:price)
   end
 end

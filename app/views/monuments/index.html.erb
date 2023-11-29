@@ -1,17 +1,30 @@
-<h1> index of monuments </h1>
+<!-- Implement a banner with a login & signup -->
+<!-- I want to create a banner that will be displayed on every page of my application.
+I will create a new file in my views/monuments folder called _monument.html.erb. I will
+add the following code to this file: -->
+
+<!-- create a navbar for my application and want this navbar to be contained into a "header"
+class that I will create in my application.css file. I will also want to add a link to
+the home page, a link to the monuments index page, and a link to the new monument page.
+I will use the link_to helper method to create these links. The link_to helper method
+takes two arguments: the text that will be displayed on the page and the path that the
+link will take the user to. I will use the root_path for the home page, the monuments_path
+for the monuments index page, and the new_monument_path for the new monument page. -->
+
+
+<%= render 'header' %>
 
 <div class="container my-2">
   <div class="row">
-    <div class="col" data-controller="insert-in-list">
-      <p style="color: green"><%= notice %></p>
-
-      <h1>Monuments</h1>
-
-      <div id="monuments" data-insert-in-list-target="items">
+    <div id="monuments" data-insert-in-list-target="items">
         <% @monuments.each do |monument| %>
           <%= render monument %>
         <% end %>
       </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>
