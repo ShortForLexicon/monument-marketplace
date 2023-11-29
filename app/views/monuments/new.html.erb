@@ -1,6 +1,18 @@
-<h1>New monument</h1>
+<%= render 'header' %>
 
-<%= render "form", monument: @monument %>
+<h1>Adding a Monument</h1>
+
+<div class="container">
+  <div class="">
+    <div class="row new-form">
+      <div class="col-lg-6 left-bg-list">
+      </div>
+      <div class="col-lg-6 right-bg" >
+        <%= render "form", monument: @monument %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <br>
 
