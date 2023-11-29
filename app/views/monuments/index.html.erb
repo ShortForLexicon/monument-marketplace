@@ -1,1 +1,18 @@
-<h1>Monopy Place</h1>
+<h1> index of monuments </h1>
+
+<div class="container my-2">
+  <div class="row">
+    <div class="col" data-controller="insert-in-list">
+      <p style="color: green"><%= notice %></p>
+
+      <h1>Monuments</h1>
+
+      <div id="monuments" data-insert-in-list-target="items">
+        <% @monuments.each do |monument| %>
+          <%= render monument %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
