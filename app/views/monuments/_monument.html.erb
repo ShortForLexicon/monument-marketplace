@@ -6,17 +6,7 @@ takes two arguments: the text that will be displayed on the page and the path th
 link will take the user to. I will use the root_path for the home page, the monuments_path
 for the monuments index page, and the new_monument_path for the new monument page. -->
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">Monuments</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Monuments", monuments_path %></li>
-      <li><%= link_to "New Monument", monuments_new_path %></li>
-    </ul>
-  </div>
+<%= render 'header' %>
 
   <!-- I want to list all the monuments on my homepage -->
   <!-- I will use the each method to iterate over the array of monuments and display each
@@ -29,13 +19,13 @@ for the monuments index page, and the new_monument_path for the new monument pag
     <ul>
       <% @monuments.each do |monument| %>
         <li>
-          <%= link_to monument.name, monuments_path(monument) %>
+          <%= link_to monument.name, monument %>
           <%= monument.location %>
           <%= monument.description %>
           <%= monument.price %>
         </li>
       <% end %>
     </ul>
-    <%= link_to "New Monument", monuments_new_path %>
+    <%= link_to "New Monument", new_monument_path %>
   </div>
 </div>
