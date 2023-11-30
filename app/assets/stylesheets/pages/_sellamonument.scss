@@ -1,0 +1,41 @@
+.container{
+  width: 600px;
+  height: 550px;
+  background:rgba(255, 255, 255, 0.85);
+  border: 1px solid #161A30;
+  margin-top: 25px;
+  justify-content:center;
+  border-radius: 10px;
+  display: flex;
+    justify-content: flex-start;
+
+  .col-lg-6{
+    margin-top: 10px;
+    color:#161A30;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    width: 550px;
+
+
+
+   .form-label{
+    background-color:#C33434;
+    border: 1px solid #161A30;
+    width: 90px;
+    height: 30px;
+    padding-left: 4px;
+
+   }
+  }
+// .btn{
+//   line-height:2px;
+// }
+}
+
+.backbutton{
+  background:rgba(255, 255, 255, 0.85);
+  border: 1px solid #161A30;
+  width: 90px;
+  height: 30px;
+}
