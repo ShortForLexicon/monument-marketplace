@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   # get "/monument/:id", to: "monuments#show", as: :monuments
   # post "/monuments", to: "monuments#create"
 
+  # offers routes. You can create, index, patch/update, and maybe delete.
+  # no edit, no show, and no new page
+  resources :offers
+
 end
