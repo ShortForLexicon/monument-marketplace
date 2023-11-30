@@ -26,15 +26,14 @@
       <% end %>
     </div>
   </div>
-  <div class="container my-2">
-    <div class="row">
-      <div id="monuments" data-insert-in-list-target="items">
-          <% @monuments.each do |monument| %>
-            <%= render monument %>
-          <% end %>
-        </div>
+ <div class="container my-2">
+  <div class="row">
+    <div id="monuments" data-insert-in-list-target="items" class= "cards">
+        <% @monuments.each do |monument| %>
+          <%= render monument %>
+        <% end %>
       </div>
-  </div>
+      </div>
 
   <%= yield %>
 
