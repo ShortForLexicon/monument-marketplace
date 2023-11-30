@@ -4,4 +4,5 @@ class Monument < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :location, presence: true
+  has_one_attached :photo
 end
