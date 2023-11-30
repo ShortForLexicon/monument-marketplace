@@ -10,33 +10,32 @@
   <div class = "anouncecard">
     <div class= "name">
     <p>
-    <strong>Name:</strong>
-    <%= monument.name %>
+    <strong></strong>
+    <%= monument.name.capitalize %>
     </div>
-  </p>
+    </p>
 
-  <div class = "monument">
-    <%= image_tag "tajpicture.jpg", class:"imagemonument" %>
-  </div>
+    <div class = "monument">
+      <%= image_tag "tajpicture.jpg", class:"imagemonument" %>
+    </div>
 
-<div class = "description">
-  <p>
-    <strong>Location:</strong>
-    <%= monument.location  %>
-  </p>
+  <div class = "description">
+    <p>
+      <strong>Location:</strong>
+      <%= monument.location  %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= monument.description %>
-  </p>
-  <p>
-    <strong>Price:</strong>
-    <%= monument.price %>
-  </p>
-  <p>
-    <%= link_to "Find out more", monument %>
-    <%= link_to "New Monument", new_monument_path %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= monument.description %>
+    </p>
+    <p>
+      <strong>Price:</strong>
+      <%= monument.price %>
+    </p>
+    <p>
+      <%= link_to "Find out more", monument %>
+    </p>
   </div>
   </div>
   </div>
