@@ -1,15 +1,16 @@
 
-<header>
-  <h1>Monoply Marketplace</h1>
-</header>
-
-<nav>
-  <%= link_to 'Home', root_path %>
-  <%= link_to 'Monuments', monuments_path %>
-  <%= link_to 'Sell a Monument', new_monument_path %>
-  <%= link_to 'Login', new_user_session_path %>
-  <%= link_to 'Sign Up!', new_user_registration_path %>
-  <a data-turbo-method="delete" data-turbo-confirm="Are you sure?" href="/users/sign_out">
+<h2>Want to buy one of our beautiful monuments ?  </h2>
+<nav class = "all_options">
+  <%= link_to 'Home', root_path, class:"options1" %>
+  <%= link_to 'Monuments', monuments_path, class:"options1" %>
+  <%= link_to 'Sell a Monument', new_monument_path, class:"options1" %>
+  <%= link_to 'Sign Up!', new_user_registration_path, class:"options2" %>
+   <%= link_to 'Login', new_user_session_path, class:"options2" %>
+  <a class = "options2" data-turbo-method="delete" data-turbo-confirm="Are you sure?" href="/users/sign_out">
   Log Out
 </a>
 </nav>
+
+<div class = "bigphoto">
+<img src="bigphoto.jpg" alt="">
+</div>
