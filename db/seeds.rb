@@ -12,6 +12,7 @@ Monument.destroy_all
 
 puts "Creating monuments..."
 Monument.create(name: "Eiffel tower", location: "France", description: "A beautiful tower in Paris", price: 1500000000)
-Monument.create(name: "Statue of Liberty", location: "America", description: "An enormous green statue off the coast of New York City", price: 12)
+Monument.create(name: "Statue of Liberty", location: "America", description: "An green statue off the coast of New York
+   City", price: 12)
 
 puts "Finished!"

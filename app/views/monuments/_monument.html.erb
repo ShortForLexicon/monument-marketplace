@@ -6,36 +6,39 @@
   will take the user to. I will use the monument_path for the show page for each monument.
   I will also add a link to the new monument page. -->
 
-  <div class="container" id="<%= dom_id monument %>">
+<div class="container" id="<%= dom_id monument %>">
   <div class = "anouncecard">
     <div class= "name">
-    <p>
-    <strong></strong>
-    <%= monument.name.capitalize %>
+      <p>
+      <strong></strong>
+      <%= monument.name.capitalize %>
+      </p>
     </div>
-    </p>
 
     <div class = "monument">
       <%= image_tag "tajpicture.jpg", class:"imagemonument" %>
     </div>
 
-  <div class = "description">
-    <p>
-      <strong>Location:</strong>
-      <%= monument.location  %>
-    </p>
+   <div class = "description">
+      <p class = "mb-2">
+        <strong>Location:</strong>
+        <%= monument.location  %>
+      </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= monument.description %>
-    </p>
-    <p>
-      <strong>Price:</strong>
-      <%= monument.price %>
-    </p>
-    <p>
-      <%= link_to "Find out more", monument %>
-    </p>
+      <p class = "details",class = "mb-2">
+        <strong>Description:</strong>
+        <%= monument.description %>
+      </p>
+
+      <p class = "mb-2">
+        <strong>Price:</strong>
+        <%= monument.price %>
+      </p>
+
+      <p class = "info">
+        <%= link_to "Find out more", monument %>
+      </p>
+   </div>
+
   </div>
-  </div>
-  </div>
+</div>
