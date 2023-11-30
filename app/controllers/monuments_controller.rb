@@ -25,6 +25,6 @@ class MonumentsController < ApplicationController
   private
 
   def monument_params
-    params.require(:monument).permit(:name,:location,:description,:price)
+    params.require(:monument).permit(:name,:location,:description,:price,:photo)
   end
 end

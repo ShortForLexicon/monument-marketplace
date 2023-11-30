@@ -7,14 +7,16 @@
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div id="monuments">
-        <% if @monuments.any? %>
           <% @monuments.each do |monument| %>
             <h4><%= monument.name %></h4>
             <p><%= monument.location %></p>
+          <% if @monument.photo.present? %>
+            <%= cl_image_tag monument.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <%= cl_image_tag "", height: 300, width: 400, crop: :fill %>
           <% end %>
-        <% else %>
-          <em>Sorry, no movies found.</em>
-        <% end %>
+            <p><%= monument.description %></p>
+          <% end %>
       </div>
     </div>
   </div>
@@ -23,7 +25,6 @@
   <hr>
 
 <!-- the following is commented out because we have not added images to the database-->
-
    <!--  <div class = "monuments-grid">
       <%# <% @list.monuments.each do monument %> %>
       <%# <div class= "box-poster"> %>
