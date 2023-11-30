@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :monuments
+  resources :monuments do
+    resources :offers, only: [:new, :create, :destroy]
+  end
   # get "/monuments", to: "monuments#index"
   # get "/monuments/new", to: "monuments#new"
   # get "/monument/:id", to: "monuments#show", as: :monuments
@@ -17,6 +19,6 @@ Rails.application.routes.draw do
 
   # offers routes. You can create, index, patch/update, and maybe delete.
   # no edit, no show, and no new page
-  resources :offers
+  resources :offers, only: [:index]
 
 end
