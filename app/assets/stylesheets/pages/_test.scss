@@ -8,8 +8,7 @@ h2{
 }
 
 body {
-  background-image: url("background .jpg");
-  opacity: 20;
+ background-image: linear-gradient(rgba(214, 214, 214, 0.481), rgba(214, 214, 214, 0.481)), url("background .jpg");
   background-position: 50% 40%;
 
 }
@@ -30,19 +29,20 @@ body {
 }
 
 .anouncecard{
-  width: 264px;
-  height: 300px;
+  width: 240px;
+  height: 320px;
   flex-shrink: 0;
   border: 1px solid #161A30;
   background: rgba(255, 255, 255, 0.85);
 
 
   .name{
-    margin: auto;
-    margin-top: 10px;
-    width: 140px;
-    height: 29px;
-    flex-shrink: 0;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+    width: 215px;
+    height: 81px;
+    // flex-shrink: 0;
     color: #161A30;
     text-align: center;
     font-family: Inter;
@@ -52,14 +52,17 @@ body {
     line-height: normal;
     border: 1px solid #161A30;
     background: #C33434;
-    width: 250px;
-    height: 81px;
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 250px;
+    // height: 81px;
   }
   .imagemonument{
     margin: auto;
-    margin-left: 5px;
-    width: 250px;
+    // margin: top 20px;
+    margin-left: 11px;
+    width: 215px;
     height: 119px;
     flex-shrink: 0;
     border: 1px solid #161A30;
@@ -67,6 +70,8 @@ body {
 
   .description{
     margin: auto;
+    margin-left: 11px;
+    // margin-right: 5px;
     width: 245px;
     height: 18px;
     flex-shrink: 0;
@@ -78,5 +83,17 @@ body {
     font-weight: 400;
     line-height:1;
     justify-content: flex-end;
+
+    .details{
+      height: 20px;
+    }
+
+    .Find_out_more{
+      color:#161A30;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+    }
   }
 }
