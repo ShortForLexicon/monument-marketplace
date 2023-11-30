@@ -1,7 +1,18 @@
 
-  .btn-btn-primary{
+  .btn-primary{
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 12px;
     background-color:#176b3e;
+    border-radius: 5%;
+  }
+
+  .form-control{
+    margin-right: 10px;
+    padding: 10px;
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    position: relative;
+    display: flex;
   }
