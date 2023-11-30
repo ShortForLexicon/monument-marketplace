@@ -15,4 +15,5 @@ statue_liberty = Monument.new(name: "Statue of Liberty", location: "America", de
 statue_liberty.photo.attach(io: file_liberty, filename: "Statue.png", content_type: "image/jpg")
 statue_liberty.save!
 
+
 puts "Finished!"

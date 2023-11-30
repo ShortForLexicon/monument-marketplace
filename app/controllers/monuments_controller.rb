@@ -1,4 +1,5 @@
 class MonumentsController < ApplicationController
+
   def index
     @monuments = Monument.all
     if params[:query].present?
