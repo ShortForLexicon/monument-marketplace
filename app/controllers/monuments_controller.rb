@@ -1,6 +1,10 @@
 class MonumentsController < ApplicationController
   def index
     @monuments = Monument.all
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR location  ILIKE :query"
+      @monuments = @monuments.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show
