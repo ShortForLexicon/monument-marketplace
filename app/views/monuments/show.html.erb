@@ -6,17 +6,15 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8">
-      <div id="monuments">
-          <% @monuments.each do |monument| %>
-            <h4><%= monument.name %></h4>
-            <p><%= monument.location %></p>
-          <% if @monument.photo.present? %>
-            <%= cl_image_tag monument.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <%= cl_image_tag "", height: 300, width: 400, crop: :fill %>
-          <% end %>
-            <p><%= monument.description %></p>
-          <% end %>
+      <div id="monument">
+        <h4><%= @monument.name %></h4>
+        <p><%= @monument.location %></p>
+        <p><%= @monument.description %></p>
+        <% if @monument.photo.present? %>
+          <%= cl_image_tag @monument.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <%= image_tag "https://via.placeholder.com/300x400.png?text=No+Image+Found", height: 300, width: 400 %>
+        <% end %>
       </div>
     </div>
   </div>
