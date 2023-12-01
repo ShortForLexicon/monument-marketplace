@@ -10,6 +10,7 @@ class OffersController < ApplicationController
   end
 
   def create
+    raise
     @offer = Offer.new(offer_params)
     @offer.monument = @monument
     @offer.user = @user

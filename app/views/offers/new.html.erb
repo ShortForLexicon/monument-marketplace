@@ -7,7 +7,7 @@
 <p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user %> for <%= @monument.price %>
 
 <%= link_to "Confirm Offer",
-  offer_path(@offer),
+  offers_path(@offer),
   data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
 %>
 

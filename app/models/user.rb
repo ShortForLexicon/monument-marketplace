@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :monuments
   has_many :offers
+  has_many :offers_as_seller, through: :monuments, source: :offers
 end
