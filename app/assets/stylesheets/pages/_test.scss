@@ -8,11 +8,6 @@ h2{
   margin-top: 10px;
 }
 
-.bigphoto{
-  width: 50px;
-  height: 30px;
-  }
-
 
 body {
  background-image: linear-gradient(rgba(214, 214, 214, 0.481), rgba(214, 214, 214, 0.481)), url("background .jpg");
@@ -41,21 +36,22 @@ body {
   flex-shrink: 0;
   border: 1px solid #161A30;
   background: rgba(255, 255, 255, 0.85);
-
+  position: relative;
 
   .name{
      margin: auto;
      margin-top: 10px;
      margin-bottom: 10px;
+     padding-top: 10px;
     width: 215px;
     height: 81px;
     // flex-shrink: 0;
     color: #161A30;
     text-align: center;
     font-family:'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
     border: 1px solid #161A30;
     background: #C33434;
@@ -78,6 +74,7 @@ body {
   .description{
     margin: auto;
     margin-left: 11px;
+    margin-top: 10px;
     // margin-right: 5px;
     width: 245px;
     height: 18px;
@@ -94,6 +91,16 @@ body {
     .details{
       height: 20px;
       width: 80%;
+    }
+    .info{
+      color: #161A30;
+      font-size: 12px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 500;
+      position: absolute;
+      right: 11px;
+      bottom: 5px;
+      text-align: center;
     }
   }
 }
@@ -124,5 +131,8 @@ margin-top: 5px;
         text-align: end;
         display: flex;
       }
+
+
+
 
 }
