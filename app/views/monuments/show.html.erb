@@ -1,21 +1,20 @@
 <%= render 'header' %>
 
-<h1>show page</h1>
-
 <!-- div class container -->
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <div id="monument">
-        <h4><%= @monument.name %></h4>
-        <p><%= @monument.location %></p>
-        <p><%= @monument.description %></p>
-        <%= link_to "Buy!", new_monument_offer_path(@monument) %>
+<div class="post-show-container">
+  <h1>Welcome to <%= @monument.name %>'s details</h1>
+    <div class="justify-content-between d-flex showpage">
+      <div class="picture">
         <% if @monument.photo.present? %>
-          <%= cl_image_tag @monument.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @monument.photo.key, height: 400, width: 500, crop: :fill %>
         <% else %>
           <%= image_tag "https://via.placeholder.com/300x400.png?text=No+Image+Found", height: 300, width: 400 %>
         <% end %>
+      </div>
+      <div class="monument-show">
+        <p><%= @monument.location %></p>
+        <p><%= @monument.description %></p>
+        <%= link_to "Buy!", new_monument_offer_path(@monument) %>
       </div>
     </div>
   </div>
