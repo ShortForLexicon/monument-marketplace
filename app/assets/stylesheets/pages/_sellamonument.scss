@@ -1,21 +1,33 @@
-.container{
+.container-new{
   width: 600px;
   height: 550px;
   background:rgba(255, 255, 255, 0.85);
-  border: 1px solid #161A30;
+  border: 2px solid #161A30;
   margin-top: 25px;
   justify-content:center;
-  border-radius: 10px;
+  // border-radius: 10px;
   display: flex;
   justify-content: flex-start;
 
+  position: relative;
+  margin-bottom: 30px;
+  .form{
+    width: 600px;
+    height: 520px;
+    margin: auto;
+    border: 1px solid #161A30;
+
+  }
+
+
   .col-lg-6{
-    margin-top: 10px;
-    color:#161A30;
+    margin-top: 5px;
+    color: #161A30;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
     width: 550px;
+    margin-left: 10px;
 
 
 
@@ -25,7 +37,7 @@
     width: 90px;
     height: 30px;
     padding-left: 4px;
-
+    margin-left: 2px;
    }
   }
 // .btn{
@@ -34,8 +46,28 @@
 }
 
 .backbutton{
-  background:rgba(255, 255, 255, 0.85);
-  border: 1px solid #161A30;
-  width: 90px;
+  // width: 90px;
+  // height: 30px;
+  color: #161A30;
+  font-size: 13px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+}
+
+.btn{
+  background-color:#557C55;
+  color: white;
+  width: 160px;
   height: 30px;
+  text-align:center;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+
 }

@@ -2,9 +2,12 @@
   .btn-primary{
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     background-color:#176b3e;
-    border-radius: 5%;
+    border: 1px solid #161A30;
+    width: 30px;
+    font-weight: 700;
+
   }
 
   .form-control{
@@ -15,4 +18,6 @@
     font-size: 12px;
     position: relative;
     display: flex;
+    // width: 1000px;
+    height: 30px;
   }
