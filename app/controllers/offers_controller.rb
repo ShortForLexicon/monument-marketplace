@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_monument, except: [:index]
+  before_action :set_monument, except: [:index, :update]
 
   def index
     @offers = Offer.all
@@ -23,11 +23,12 @@ class OffersController < ApplicationController
   end
 
   def update
+    @offer = Offer.find(params[:id])
+    @offer.status = params[:status]
+    @offer.save!
+    redirect_to offers_path
   end
 
-  def delete
-    @offer.delete
-  end
 
   private
 
