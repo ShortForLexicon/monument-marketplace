@@ -1,0 +1,17 @@
+
+
+<h1>Confirm your Offer</h1>
+
+<h2>Offer details</h2>
+
+<p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user %> for <%= @monument.price %>
+
+<%= link_to "Confirm Offer",
+  offer_path(@offer),
+  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+%>
+
+
+<div>
+  <%= link_to "Back to monuments", monuments_path %>
+</div>

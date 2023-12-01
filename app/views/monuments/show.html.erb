@@ -10,6 +10,7 @@
         <h4><%= @monument.name %></h4>
         <p><%= @monument.location %></p>
         <p><%= @monument.description %></p>
+        <%= link_to "Buy!", new_monument_offer_path(@monument) %>
         <% if @monument.photo.present? %>
           <%= cl_image_tag @monument.photo.key, height: 300, width: 400, crop: :fill %>
         <% else %>
