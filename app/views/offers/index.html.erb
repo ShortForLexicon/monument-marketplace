@@ -32,9 +32,9 @@
         <%@offer = offer%>
         <% if offer.monument.user == current_user %>
           <div>
-          <h3> Your offer to buy: <%= offer.monument.name.capitalize %></h3>
+          <h3> The user: <%= offer.user.username %></h3>
+          <p> Has offered to buy your monument: <%= offer.monument.name.capitalize %> </p>
           <p> For: <%= offer.monument.price %> </p>
-          <p> From the owner: <%= offer.monument.user.username %> </p>
           <p> Status: <%= offer.status %> </p>
           <%= link_to "Confirm Offer",
   offer_path(@offer, status: "accepted"),
