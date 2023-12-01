@@ -1,0 +1,29 @@
+.all_options{
+  background-color:#161A30;
+  width: 100%;
+  height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+
+
+  .options1{
+margin-top: 5px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-align:start;
+    display: flex;
+  }
+  .options2{
+    margin-top: 5px;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: end;
+        display: flex;
+      }
+
+
+}
