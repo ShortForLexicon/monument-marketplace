@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   # no edit, no show, and no new page
   resources :offers, only: [:index, :destroy, :update]
 
+  get "/offers/:id", to: "offers#update"
+
 end

@@ -26,6 +26,7 @@
     <div id="monuments" data-insert-in-list-target="items" class= "cards">
     <h2>--Offers for your monuments--</h2>
         <% @offers.each do |offer| %>
+        <%@offer = offer%>
         <% if offer.monument.user == current_user %>
           <div>
           <p> Your offer to buy: <%= offer.monument.name.capitalize %></p>
@@ -33,13 +34,15 @@
           <p> From the owner: <%= offer.monument.user.username %> </p>
           <p> Status: <%= offer.status %> </p>
           <%= link_to "Confirm Offer",
-  offers_path(@offer),
-  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+  offer_path(@offer, status: "accepted"),
+  data: {turbo_confirm: "Are you sure?"}
 %>
 <%= link_to "Reject Offer",
-  offers_path(@offer),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  offer_path(@offer, status: "rejected"),
+  data: { turbo_confirm: "Are you sure?"}
 %>
+
+
           </p>
           </div>
         <% end %>
