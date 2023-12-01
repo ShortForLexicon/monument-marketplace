@@ -1,14 +1,16 @@
+<div class="offerrow">
 <h1>Offers Index</h1>
 
 
  <div class="container my-2">
+ <h2>--Offers you have made--</h2>
   <div class="row">
-    <div id="monuments" data-insert-in-list-target="items" class= "cards">
-    <h2>--Offers you have made--</h2>
+    <div id="monuments" data-insert-in-list-target="items">
+
         <% @offers.each do |offer| %>
         <% if offer.user == current_user%>
-          <div>
-          <p> Your offer to buy: <%= offer.monument.name.capitalize %></p>
+          <div class="description">
+          <h3 class="text-left"> Your offer to buy: <%= offer.monument.name.capitalize %></h3>
           <p> For: <%= offer.monument.price %> </p>
           <p> From the owner: <%= offer.monument.user.username %> </p>
           <p> Status: <%= offer.status %> </p>
@@ -18,17 +20,18 @@
         <% end %>
       </div>
       </div>
-      </div>
+</div>
 
 
-     <div class="container my-2">
+ <div class="container my-2">
+ <h2>--Offers for your monuments--</h2>
   <div class="row">
-    <div id="monuments" data-insert-in-list-target="items" class= "cards">
-    <h2>--Offers for your monuments--</h2>
+    <div id="monuments" data-insert-in-list-target="items">
+
         <% @offers.each do |offer| %>
         <% if offer.monument.user == current_user %>
           <div>
-          <p> Your offer to buy: <%= offer.monument.name.capitalize %></p>
+          <h3> Your offer to buy: <%= offer.monument.name.capitalize %></h3>
           <p> For: <%= offer.monument.price %> </p>
           <p> From the owner: <%= offer.monument.user.username %> </p>
           <p> Status: <%= offer.status %> </p>
@@ -47,3 +50,5 @@
       </div>
       </div>
       </div>
+
+</div>
