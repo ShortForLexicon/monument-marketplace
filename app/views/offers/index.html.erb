@@ -1,1 +1,49 @@
 <h1>Offers Index</h1>
+
+
+ <div class="container my-2">
+  <div class="row">
+    <div id="monuments" data-insert-in-list-target="items" class= "cards">
+    <h2>--Offers you have made--</h2>
+        <% @offers.each do |offer| %>
+        <% if offer.user == current_user%>
+          <div>
+          <p> Your offer to buy: <%= offer.monument.name.capitalize %></p>
+          <p> For: <%= offer.monument.price %> </p>
+          <p> From the owner: <%= offer.monument.user.username %> </p>
+          <p> Status: <%= offer.status %> </p>
+          </p>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+      </div>
+      </div>
+
+
+     <div class="container my-2">
+  <div class="row">
+    <div id="monuments" data-insert-in-list-target="items" class= "cards">
+    <h2>--Offers for your monuments--</h2>
+        <% @offers.each do |offer| %>
+        <% if offer.monument.user == current_user %>
+          <div>
+          <p> Your offer to buy: <%= offer.monument.name.capitalize %></p>
+          <p> For: <%= offer.monument.price %> </p>
+          <p> From the owner: <%= offer.monument.user.username %> </p>
+          <p> Status: <%= offer.status %> </p>
+          <%= link_to "Confirm Offer",
+  offers_path(@offer),
+  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+%>
+<%= link_to "Reject Offer",
+  offers_path(@offer),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+          </p>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+      </div>
+      </div>
