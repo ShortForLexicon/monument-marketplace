@@ -22,6 +22,13 @@ class OffersController < ApplicationController
     end
   end
 
+  def update
+  end
+
+  def delete
+    @offer.delete
+  end
+
   private
 
   def set_monument

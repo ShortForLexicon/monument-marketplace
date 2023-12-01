@@ -19,6 +19,6 @@ Rails.application.routes.draw do
 
   # offers routes. You can create, index, patch/update, and maybe delete.
   # no edit, no show, and no new page
-  resources :offers, only: [:index]
+  resources :offers, only: [:index, :destroy, :update]
 
 end
