@@ -1,17 +1,21 @@
 
+<div class= "supermax">
+  <h1>Confirm your Offer</h1>
 
-<h1>Confirm your Offer</h1>
+    <div class= "linkpath">
+    <h2>Offer details</h2>
 
-<h2>Offer details</h2>
+      <p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user.username %> for <%= @monument.price %>
 
-<p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user.username %> for <%= @monument.price %>
+<br>
+<br>
 
-<%= link_to "Confirm Offer",
-  monument_offers_path(@monument),
-  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
-%>
-
-
-<div>
-  <%= link_to "Back to monuments", monuments_path %>
+        <%= link_to "Confirm Offer",
+          monument_offers_path(@monument),
+          data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+        %>
+    <div>
+      <%= link_to "Back to monuments", monuments_path, class: "linkpath"%>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,67 @@
+.supermax{
+  h1 {
+    color: #ffffff;
+    text-align: center;
+    font-family: josefin sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 30px;
+    height: 93px;
+    border: 1px solid #000;
+    background: #C33434;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  .linkpath {
+    color: #161A30;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 10px;
+    align-items: center;
+    margin-left: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+  }
+
+  h2 {
+    color: #555;
+    text-align: center;
+    padding-top: 10px;
+    height: 20%;
+  }
+
+  p {
+    color: #777;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  a {
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    align-items: center;
+    margin-top: 5px;
+    display: inline-flex;
+  }
+
+  a:hover {
+    background-color: #0056b3;
+  }
+
+  div {
+    margin-top: 20px;
+  }
+
+}
