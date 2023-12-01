@@ -15,7 +15,8 @@ class MonumentsController < ApplicationController
 
   def create
     @monument = Monument.new(monument_params)
-    @monument.save
+    @monument.user = current_user
+    @monument.save!
     redirect_to @monument
   end
 
