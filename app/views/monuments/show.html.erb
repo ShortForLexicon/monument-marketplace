@@ -6,15 +6,15 @@
     <div class="justify-content-between d-flex showpage">
       <div class="picture">
         <% if @monument.photo.present? %>
-          <%= cl_image_tag @monument.photo.key, height: 400, width: 500, crop: :fill %>
-        <% else %>
-          <%= image_tag "https://via.placeholder.com/300x400.png?text=No+Image+Found", height: 300, width: 400 %>
-        <% end %>
+          <%= cl_image_tag @monument.photo.key, height: 560, width: 640, crop: :fill, class: "photoshow"%>
+          <% else %>
+            <%= image_tag "https://via.placeholder.com/300x400.png?text=No+Image+Found", height: 300, width: 400 %>
+          <% end %>
       </div>
       <div class="monument-show">
-        <p><%= @monument.location %></p>
-        <p><%= @monument.description %></p>
-        <%= link_to "Buy!", new_monument_offer_path(@monument) %>
+        <p><strong>Location :</strong> <%= @monument.location %></p>
+        <p><strong>Description :</strong> <%= @monument.description %></p>
+        <%= link_to "Buy!", new_monument_offer_path(@monument), class: "buybutton"%>
       </div>
     </div>
   </div>

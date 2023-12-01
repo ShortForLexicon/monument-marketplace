@@ -1,7 +1,7 @@
-h1{
-  color: #161A30;
+h1 {
+  color: #ffffff;
   text-align: center;
-  font-family: Inter;
+  font-family: josefin sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -24,29 +24,51 @@ h1{
   padding-top: 20px;
   }
 
-  .showpage{
+  .showpage {
     margin-left: 50px;
     margin-right: 50px;
   }
 
 
-.monument-show {
-  width: 50%;
-}
-
-.monument-show p {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  font-weight: bold;
+  .monument-show {
+    width: 50%;
   }
 
-.monument-show a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
+  .monument-show p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    font-weight: normal;
+    font-family: josefin sans;
+    }
+
+  .monument-show a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .buybutton {
+    text-align: center;
+    display: inline-block;
+    margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em gray;
+    cursor: pointer;
+    color: #C33434;
+  }
+
+  .photoshow{
+    border: 1px solid #C33434;
+  }
