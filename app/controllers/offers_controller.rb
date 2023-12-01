@@ -1,28 +1,32 @@
 class OffersController < ApplicationController
+  before_action :set_monument, except: [:index]
+
   def index
     @offers = Offer.all
   end
 
   def new
-    @monument = Monument.find(params[:monument_id])
     @offer = Offer.new
-    flash[:notice] = "Offer made successfully"
+
   end
 
   def create
-    raise
-    @offer = Offer.new(offer_params)
+    @offer = Offer.new(status: "pending")
     @offer.monument = @monument
-    @offer.user = @user
-    redirect_to @monument
+    @offer.user = current_user
     if @offer.save
-      redirect_to monument_path(@monument)
+      flash[:notice] = "Offer made successfully"
+      redirect_to offers_path
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   private
+
+  def set_monument
+   @monument = Monument.find(params[:monument_id])
+  end
 
   def offer_params
     params.require(:offer).permit(:user, :monument)

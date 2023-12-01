@@ -4,10 +4,10 @@
 
 <h2>Offer details</h2>
 
-<p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user %> for <%= @monument.price %>
+<p> You, <%= current_user.username%> are buying <%= @monument.name %> from <%= @monument.user.username %> for <%= @monument.price %>
 
 <%= link_to "Confirm Offer",
-  offers_path(@offer),
+  monument_offers_path(@monument),
   data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
 %>
 
